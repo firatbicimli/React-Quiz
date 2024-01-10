@@ -25,3 +25,10 @@
     background-color: #171717;
     color: #e3661e;
 }
+
+.questionCard-timer {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    font-weight: bold;
+}
