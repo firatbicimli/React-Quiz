@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import * as api from '../../api/api' 
 import "./Quiz.css"
+import Modal from '../../components/modal/Modal'
 import QuestionCard from '../../components/questionCard/QuestionCard'
 
 const Quiz = () => {
@@ -23,7 +24,9 @@ const Quiz = () => {
 
   return (
     <div className='quiz'>
-      <QuestionCard
+        {
+            modal ? <Modal score={score}/> : 
+            <QuestionCard
         questionsData ={questionsData}
         score={score}
         setScore={setScore}
@@ -31,7 +34,9 @@ const Quiz = () => {
         setCount={setCount}
         modal={modal}
         setModal ={setModal}
-      />
+        />
+        }
+      
     </div>
   )
 }
